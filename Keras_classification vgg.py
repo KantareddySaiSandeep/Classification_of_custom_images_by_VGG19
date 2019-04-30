@@ -158,11 +158,7 @@ model3 = Model(img_input, x)
 model3.compile(optimizer='adam',
                loss='categorical_crossentropy',
                 metrics=['accuracy'])
-
-
-
-
- 
+model3.summary()
 model3.fit(x_train, y_train, epochs=550)
 model3.evaluate(x_test, y_test)
 y_pred=model3.predict(y_test)

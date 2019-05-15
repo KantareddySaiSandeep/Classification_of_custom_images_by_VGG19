@@ -48,6 +48,7 @@ def load_train(train_path, image_size, classes):
             label = np.zeros(len(classes))
             label[index] = 1.0
             labels.append(label)
+            labels.append(fields)#for regression
             flbase = os.path.basename(fl)
             img_names.append(flbase)
     images = np.array(images)
